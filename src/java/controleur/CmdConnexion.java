@@ -26,8 +26,19 @@ public class CmdConnexion implements Icommand{
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
+       HttpSession hs = request.getSession();
+       ClientBean cb = (ClientBean) hs.getAttribute("user");
+        if (cb == null ) {
+            return "WEB-INF/connexionjsp.jsp" ;
+            
+        }else{
+            return "WEB-INF/accueiljsp.jsp";
+        }
+       
+       
+        
            
-       return "WEB-INF/connexionjsp.jsp" ;
+       
     }
     
 }

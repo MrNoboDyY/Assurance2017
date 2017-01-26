@@ -8,13 +8,15 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
         <script src="vendor/jquery/jquery.js" type="text/javascript"></script>
-        
+
         <script src="js/pub.js" type="text/javascript"></script>
 
         <title>Ma Compagnie d'Assurance</title>
@@ -39,7 +41,8 @@
         <![endif]-->
     </head>
     <body>
-        <body id="page-top" class="index">
+    <body id="page-top" class="index">
+
 
         <!-- Navigation -->
         <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
@@ -75,7 +78,15 @@
                             <a href="Assurance2017Controleur?cmd=usager" >Creer Mon Compte</a>
                         </li>
                         <li >
-                            <a href="Assurance2017Controleur?cmd=connexion" >Se connecter</a>
+                            <c:choose>
+                                <c:when test="${user != null}">
+                                    <a href="Assurance2017Controleur?cmd=deconnexion" >connecter</a>
+                                </c:when>                               
+                                <c:otherwise>
+                                    <a href="Assurance2017Controleur?cmd=connexion" >Se connecter</a>
+                                </c:otherwise>
+                            </c:choose>
+                           <!--                            <a href=""></a>-->
                         </li>
                     </ul>
                 </div>
@@ -189,7 +200,7 @@
                             Grâce à nos forfaits kilométriques, vous payez seulement pour les trajets réellement parcourus. Et avec les Renforts Dépannage et Indemnisation, l’assistance et le remboursement de votre voiture sont renforcés en cas de vol ou de destruction.
                             Bonne nouvelle : nous récompensons votre fidélité</p>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
@@ -316,6 +327,6 @@
         </div>
 
     </body>
-   
-    
+
+
 </html>

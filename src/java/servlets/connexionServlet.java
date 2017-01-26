@@ -8,6 +8,7 @@ package servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -33,16 +34,16 @@ public class connexionServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             
-            String email = request.getParameter("email");
-            String password = request.getParameter("password");
+            //recuperer les parametres "username" + "password"
+////            String email = request.getParameter("email");
+//            String username = request.getParameter("username");
+//            String password = request.getParameter("password");
+//            
+//            HttpSession hs = request.getSession();
             
-            HttpSession hs = request.getSession();
-            
-            hs.setAttribute("email", email);
-            hs.setAttribute("password", password);
-            
-            
-             
+//            hs.setAttribute("username", username);
+//            hs.setAttribute("password", password);
+                   
         }
     }
 

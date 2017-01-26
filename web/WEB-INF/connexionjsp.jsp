@@ -38,18 +38,18 @@
     <body>
         <!--action="login avec mot de passe "-->
         <form id="login-form" action="Assurance2017Controleur?cmd=essaiconnexion" method="post" role="form" style="display: block;">
-            <div class="form-group">
-                <input type="email" name="email" id="email" tabindex="1" class="form-control requis" placeholder="Email Address" >"
-                <span class="erreur">${form.erreurs['email']}</span>
-            </div>
 <!--            <div class="form-group">
-                <input type="text"  name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="<c:out value=""/>"
-                <span class="erreur"></span>               
+                <input type="email" name="email" id="email" tabindex="1" class="form-control requis" placeholder="Email Address" >"
+                <span class="erreur"></span>
             </div>-->
+            <div class="form-group">
+                <input type="text"  name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value=""/>
+                <span class="erreur">${form.erreurs['username']}</span>               
+            </div>
             <br>
             <div class="form-group">
-                <input type="password" name="password" id="password" tabindex="2" class="form-control requis" placeholder="Password">
-                <span class="erreurs" >${form.erreurs['password']}</span>
+                <input type="telephone" name="telephone" id="telephone" tabindex="2" class="form-control requis" placeholder="Telephone">
+                <span class="erreurs" >${form.erreurs['telephone']}</span>
             </div>
             <br>
             <div class="form-group text-center">
