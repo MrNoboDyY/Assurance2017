@@ -1,0 +1,63 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7 déc. 2016, 16:01:51
+    Author     : lapin
+*/
+
+
+.button{
+    color: #ffffff;
+    background-color: #57d0b2;
+    padding: 10px 20px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: background 0.3s ease;
+/*    -webkit-transition: background 0.3s ease;*/
+    transition: width 2s ease-in .5s;
+    cursor: pointer;
+}
+/* première étape */
+p#doigt a:hover, p#doigt a:focus {
+background-color:#ff8c00; /* pour les vieux navigateurs */
+color: black;
+animation-name: doigt; /* nom de l'animation */
+animation-duration: 2s; /* temps de l'animation (4s) */
+animation-iteration-count: infinite; /* nombre de boucles (infinie) */
+animation-timing-function: linear; /* accelération de l'animation (constant) */
+}
+/* deuxième étape */
+@keyframes doigt {
+0% {background:rgba(255,140,0,0.4) url(/images/main.png) no-repeat 5px 10px;}
+50% {background:rgba(255,140,0,1) url(/images/main.png) no-repeat 50px 10px;}
+100% {background:rgba(255,140,0,0.4) url(/images/main.png) no-repeat 5px 10px;}
+}
+
+#formul {
+    margin-top: 100px;
+    padding: 100px;
+    
+    background-color: #c9c9e3;
+}
+.hide{
+    display: none;
+}
+.active{
+    
+}
+.success{
+    
+}
+.info{
+    
+}
+.warning{
+    
+}
+.danger{
+    
+}
