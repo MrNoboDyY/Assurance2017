@@ -20,7 +20,7 @@ public class CmdDeconnexion implements Icommand {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        HttpSession session = request.getSession();
+       HttpSession session = request.getSession();
        session.removeAttribute("user");
        return "WEB-INF/accueiljsp.jsp";
     }

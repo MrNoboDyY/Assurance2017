@@ -78,17 +78,17 @@ public class ConnexionBean implements Serializable {
         propertySupport.removePropertyChangeListener(listener);
     }
     
-    private void validationPassword(String password){
-       
-    }
-    
-    private void validationEmail(){
-        
-    }
-    
-    private void setErreur(){
-        
-    }
+//    private void validationPassword(String password){
+//       
+//    }
+//    
+//    private void validationEmail(){
+//        
+//    }
+//    
+//    private void setErreur(){
+//        
+//    }
     
     
     

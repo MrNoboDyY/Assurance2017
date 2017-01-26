@@ -115,6 +115,8 @@ public class NewJerseyClient {
        utilisateurs = gson.fromJson(string, new TypeToken<List<ClientBean>>(){}.getType());
        return utilisateurs;
    }
+    
+    
 
     public <T> T findAll_XML(Class<T> responseType) throws ClientErrorException {
         WebTarget resource = webTarget;
@@ -133,5 +135,6 @@ public class NewJerseyClient {
     public void close() {
         client.close();
     }
+    
     
 }

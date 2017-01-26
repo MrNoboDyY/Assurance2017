@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 import packproject.NewJerseyClient;
 import packproject.NewJerseyDevis;
 import packproject.NewJerseyRecap;
+import servlets.calculprime;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -46,7 +47,7 @@ public class CmdRecap implements Icommand {
         
         /* creation du DevisBean */
         DevisBean devis = new DevisBean();
-
+        
         /* creation du Recap */
         njr.create_JSON(recap);
         List<RecapBean> lrb = njr.recaps();
@@ -55,9 +56,13 @@ public class CmdRecap implements Icommand {
 //        }
 //        System.out.println(lrb.get(lrb.size()-1).getId());
 
-        devis.setDate("10/10/2010");
-        //devis.setRecap(lrb.get(lrb.size()-1));//recuperer le dernier objet entré !!     
+        
+        devis.setRecap(lrb.get(lrb.size()-1));//recuperer le dernier objet entré !!     
         devis.setClient(client);
+        
+        //recuperation de la prime du client!!
+        
+        
         njd.create_JSON(devis);
         request.setAttribute("devis", devis);
 

@@ -5,10 +5,7 @@
  */
 package controleur;
 
-import com.sun.xml.rpc.processor.modeler.j2ee.xml.string;
 import entity.ClientBean;
-import java.util.HashMap;
-import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -17,27 +14,18 @@ import javax.servlet.http.HttpSession;
  *
  * @author lapin
  */
-public class CmdConnexion implements Icommand{
+public class CmdPrime implements Icommand{
 
-    public CmdConnexion() {
+    public CmdPrime() {
     }
-    
-    
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-       HttpSession hs = request.getSession();
-       ClientBean cb = (ClientBean) hs.getAttribute("user");
-        if (cb == null ) {
-            return "WEB-INF/connexionjsp.jsp" ;            
-        }else{
-            return "WEB-INF/accueiljsp.jsp";
-        }
-       
-       
+        HttpSession hs = request.getSession(true);
         
-           
-       
+        
+        
+        return "WEB-INF/devisjsp.jsp"; 
     }
     
 }

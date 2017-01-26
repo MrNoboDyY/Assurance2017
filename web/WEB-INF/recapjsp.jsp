@@ -52,10 +52,9 @@
         
        
         <div class="centerize">           
-            <input class="buttonInfosOk"  type="submit" id="InfosOK"  value="OK! " name="Infos OK !" />
-        </div>       
-
-
+            <input class="buttonInfosOk"  type="submit" id="InfosOK"  value="OK! " name="Infos OK !" /><br><br>
+            <input type="submit" value="retour"  name="retour" onclick="WEB-INF/accueiljsp.jsp"  />
+        </div> 
         <footer class="text-center resume-footer"  >
             <div class="footer-above">
                 <div class="container">

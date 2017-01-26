@@ -7,6 +7,8 @@ package entity;
 
 import java.beans.*;
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -65,6 +67,7 @@ public class DevisBean implements Serializable {
     
     public DevisBean() {
         propertySupport = new PropertyChangeSupport(this);
+        this.date = new SimpleDateFormat().format(new Date());
     }
     
     public String getSampleProperty() {

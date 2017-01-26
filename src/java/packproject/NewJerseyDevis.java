@@ -97,4 +97,7 @@ public class NewJerseyDevis {
         client.close();
     }
     
+    public void calculPrime(){
+        
+    }
 }

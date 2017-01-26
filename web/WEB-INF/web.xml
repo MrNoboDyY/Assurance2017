@@ -28,6 +28,10 @@
         <servlet-name>CmdEssaiConnex</servlet-name>
         <servlet-class>controleur.CmdEssaiConnex</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>calculprime</servlet-name>
+        <servlet-class>servlets.calculprime</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Assurance2017Controleur</servlet-name>
         <url-pattern>/Assurance2017Controleur</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>CmdEssaiConnex</servlet-name>
         <url-pattern>/CmdEssaiConnex</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>calculprime</servlet-name>
+        <url-pattern>/calculprime</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

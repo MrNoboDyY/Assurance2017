@@ -3,6 +3,7 @@ package controleur;
 import entity.ClientBean;
 import entity.DevisBean;
 import entity.RecapBean;
+import static java.lang.System.out;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -26,22 +27,29 @@ public class CmdDevis implements Icommand {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        
+
         HttpSession hs = request.getSession(true);
 
-        NewJerseyDevis njd = new NewJerseyDevis();
-        //RecapBean recap = new RecapBean();
-        ClientBean client = new ClientBean();
-        //DevisBean dv = new DevisBean();
+        //NewJerseyDevis njd = new NewJerseyDevis();
+        
+        ClientBean cb = (ClientBean) hs.getAttribute("user");
+        if (cb == null) {
+            out.println("merci de vous enregistrer");
+            return "WEB-INF/accueiljsp.jsp";
 
-        //dv.setId(39l);
+        } else {
+            
+           return "WEB-INF/devisjsp.jsp";
+            
+
+        }
+    }
+}
+
+//dv.setId(39l);
 //        dv.setClient(client);
 //        dv.setRecap(recap);
-        
 //        njd.create_JSON(dv);
-        
-        return "WEB-INF/devisjsp.jsp";
-
 //        if (client.isValide()) {
 //
 //            hs.setAttribute("devis", dv);
@@ -49,6 +57,3 @@ public class CmdDevis implements Icommand {
 //        } else {
 //            return "WEB-INF/erreurjsp.jsp";
 //        }
-
-    }
-}

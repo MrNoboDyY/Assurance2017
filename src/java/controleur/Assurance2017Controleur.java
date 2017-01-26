@@ -87,6 +87,7 @@ public class Assurance2017Controleur extends HttpServlet {
         commands.put("connexion" ,new CmdConnexion());
         commands.put("essaiconnexion", new CmdEssaiConnex());
         commands.put("deconnexion", new CmdDeconnexion());
+        commands.put("prime", new CmdPrime());
 //        commands.put("vehicule", new CmdVehicule());
 //        commands.put("personnes", new CmdPersonnes());        
     }
