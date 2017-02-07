@@ -110,7 +110,12 @@
 
                     <a id="header" class="navbar-brand " href="#page-top" >La Compagnie qui ASSURE</a>
 
+
                 </div>
+                <!--                <div>
+                                    <marquee><img src="img/portfolio/car009.GIF"/><font color="#009900">  BIENVENU(E) ${user.nom}</font></marquee>
+                
+                                </div>-->
 
 
 
@@ -163,7 +168,7 @@
                                 <c:when test="${user != null}">
 
                                     <a href="Assurance2017Controleur?cmd=deconnexion" >Deconnecter <font color="#0099bb" >${user.nom}</font></a>
-                                    
+
 
                                 </c:when>                               
 
@@ -178,9 +183,14 @@
                             <!--                            <a href=""></a>-->
 
                         </li>
-                        
+
 
                     </ul>
+                    <br>
+                    <div>
+                        <marquee><img src="img/portfolio/car009.GIF"/><font color="#009900">  BIENVENU(E) ${user.nom}</font></marquee>
+
+                    </div>
 
                 </div>
 
@@ -191,6 +201,8 @@
             <!-- /.container-fluid -->
 
         </nav>
+
+
 
 
 
@@ -207,9 +219,10 @@
 
 
                         <!--                        ======================================================-->
-                        <div>
-                            <marquee behavior="alternate"><h1>Bonjour : ${user.nom}</h1></marquee>
-                        </div>
+
+                        <!--                        <div>
+                                                    <marquee behavior="alternate"><h1>Bonjour : ${user.nom}</h1></marquee>
+                                                </div>-->
 
                         <div class="row">
 
