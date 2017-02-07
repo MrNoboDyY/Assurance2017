@@ -162,13 +162,14 @@
 
                                 <c:when test="${user != null}">
 
-                                    <a href="Assurance2017Controleur?cmd=deconnexion" >connecter</a>
+                                    <a href="Assurance2017Controleur?cmd=deconnexion" >Deconnecter <font color="#0099bb" >${user.nom}</font></a>
+                                    
 
                                 </c:when>                               
 
                                 <c:otherwise>
 
-                                    <a href="Assurance2017Controleur?cmd=connexion" >Se connecter</a>
+                                    <a href="Assurance2017Controleur?cmd=connexion" >Me connecter</a>
 
                                 </c:otherwise>
 
@@ -177,6 +178,7 @@
                             <!--                            <a href=""></a>-->
 
                         </li>
+                        
 
                     </ul>
 
@@ -205,6 +207,9 @@
 
 
                         <!--                        ======================================================-->
+                        <div>
+                            <marquee behavior="alternate"><h1>Bonjour : ${user.nom}</h1></marquee>
+                        </div>
 
                         <div class="row">
 
