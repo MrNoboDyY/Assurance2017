@@ -188,7 +188,7 @@
                     </ul>
                     <br>
                     <div>
-                        <marquee><img src="img/portfolio/car009.GIF"/><font color="#009900">  BIENVENU(E) ${user.nom}</font></marquee>
+                        <marquee><img src="img/portfolio/car009.GIF"/></marquee>
 
                     </div>
 
