@@ -208,7 +208,7 @@
 
         <!-- Header -->
 
-        <header>
+        <header class="hauteur_princ">
 
             <div class="container">
 

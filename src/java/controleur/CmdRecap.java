@@ -40,7 +40,7 @@ public class CmdRecap implements Icommand {
         recap.setKilometrage(request.getParameter("Kilometrages"));
         recap.setMontant(request.getParameter("Montant"));
 
-        ////////////////////////////////////////////////////////////////
+        ////////////////////////////// //////////////////////////////////
 /*ceation / recuperation de la session*/
         HttpSession hs = request.getSession(true);
         ClientBean client = njc.find_JSON(ClientBean.class, "1");

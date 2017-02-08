@@ -94,3 +94,6 @@ p#doigt a:hover, p#doigt a:focus {
 #header{
     text-align: center;
 }
+.hauteur_princ{
+    margin-top: 150px;
+}
