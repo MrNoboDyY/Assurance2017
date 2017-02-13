@@ -167,7 +167,7 @@
 
                                 <c:when test="${user != null}">
 
-                                    <a href="Assurance2017Controleur?cmd=deconnexion" >Deconnecter <font color="#0099bb" >${user.nom}</font></a>
+                                    <a href="Assurance2017Controleur?cmd=deconnexion" >Me Deconnecter <font color="#0099bb" >${user.nom}</font></a>
 
 
                                 </c:when>                               
